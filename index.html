@@ -545,6 +545,171 @@
       gap: 8px;
     }
 
+    /* Portfolio Section */
+    .portfolio {
+      padding: 60px 0 100px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .portfolio-card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      border-radius: 26px;
+    }
+
+    .portfolio-card-wide {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+    }
+
+    .portfolio-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      background: #e2e5ed;
+      border-bottom: 2px solid var(--clay-border);
+    }
+
+    .portfolio-card-wide .portfolio-img-wrap {
+      height: 100%;
+      min-height: 280px;
+      border-bottom: none;
+      border-right: 2px solid var(--clay-border);
+    }
+
+    .portfolio-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.35s ease;
+      display: block;
+    }
+
+    .portfolio-card:hover .portfolio-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(35, 38, 58, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      padding: 16px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .portfolio-card:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-live-btn, .portfolio-repo-btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .portfolio-live-btn {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .portfolio-live-btn:hover {
+      background: var(--primary-light);
+      transform: scale(1.04);
+    }
+
+    .portfolio-repo-btn {
+      background: #ffffff;
+      color: var(--text-main);
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .portfolio-repo-btn:hover {
+      background: #f0f2f8;
+      color: var(--primary);
+      transform: scale(1.04);
+    }
+
+    .portfolio-content {
+      padding: 28px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .portfolio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .ptag {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: #e8ebf3;
+      color: var(--primary-dark);
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: inset 1px 1px 2px rgba(180, 185, 205, 0.2);
+    }
+
+    .portfolio-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      letter-spacing: -0.4px;
+    }
+
+    .portfolio-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .portfolio-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(180, 185, 205, 0.25);
+    }
+
+    .pmeta-item {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-soft);
+    }
+
     /* FAQ Section */
     .faq {
       padding: 60px 0 100px;
@@ -649,6 +814,17 @@
       .services-grid {
         grid-template-columns: 1fr;
       }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      .portfolio-card-wide {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+      }
+      .portfolio-card-wide .portfolio-img-wrap {
+        border-right: none;
+        border-bottom: 2px solid var(--clay-border);
+      }
       .calc-grid {
         grid-template-columns: 1fr;
       }
@@ -694,9 +870,9 @@
       </a>
       <ul class="nav-links">
         <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#portfolio">Portofolio</a></li>
         <li><a href="#alur">Alur Kerja</a></li>
         <li><a href="#stack">Tech Stack</a></li>
-        <li><a href="#kalkulator">Estimasi</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20mau%20konsultasi%20project%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn nav-cta-btn">
@@ -923,6 +1099,144 @@
         <span class="tech-pill">🤖 TensorFlow / PyTorch / YOLO</span>
         <span class="tech-pill">🐳 Docker & Cloud Deployment</span>
         <span class="tech-pill">📊 PowerBI / Streamlit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Portofolio Nyata</span>
+        <h2 class="section-title">Project yang Sudah Kami Kerjakan</h2>
+        <p class="section-desc">Bukan janji — ini bukti. Setiap project bisa kamu cek langsung source code-nya.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- SIM Akreditasi -->
+        <div class="clay-card portfolio-card">
+          <div class="portfolio-img-wrap">
+            <img src="assets/projects/sim-akreditasi.png" alt="SIM Akreditasi RS - Django Web App" loading="lazy">
+            <div class="portfolio-overlay">
+              <a href="https://sim-akreditasi-web-production.up.railway.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">🔗 Live Demo</a>
+              <a href="https://github.com/faishaltsq/sim-akreditasi-django" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">⭐ Lihat Repo</a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-tags">
+              <span class="ptag">Django</span>
+              <span class="ptag">PostgreSQL</span>
+              <span class="ptag">Supabase</span>
+              <span class="ptag">Railway</span>
+            </div>
+            <h3 class="portfolio-title">SIM Akreditasi Rumah Sakit</h3>
+            <p class="portfolio-desc">Sistem informasi manajemen akreditasi RS lengkap: matriks PDCA 7-kolom, auto-scoring KARS, manajemen dokumen multi-pokja, 13 role user, dan ekspor PDF resmi.</p>
+            <div class="portfolio-meta">
+              <span class="pmeta-item">🗂️ Full-stack Web App</span>
+              <span class="pmeta-item">⚡ Enterprise Grade</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web-Weave -->
+        <div class="clay-card portfolio-card">
+          <div class="portfolio-img-wrap">
+            <img src="assets/projects/web-weave.png" alt="WebWeave - AI QA Automation Generator" loading="lazy">
+            <div class="portfolio-overlay">
+              <a href="https://web-weave-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">🔗 Live Demo</a>
+              <a href="https://github.com/faishaltsq/Web-Weave" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">⭐ Lihat Repo</a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-tags">
+              <span class="ptag">Next.js</span>
+              <span class="ptag">Playwright</span>
+              <span class="ptag">AI/LLM</span>
+              <span class="ptag">Vercel</span>
+            </div>
+            <h3 class="portfolio-title">WebWeave — AI QA Automation</h3>
+            <p class="portfolio-desc">Generator skrip automation testing berbasis AI. Scan DOM halaman target, ekstrak locator kandidat, dan generate skrip Playwright/Cypress/Selenium otomatis via LLM.</p>
+            <div class="portfolio-meta">
+              <span class="pmeta-item">🤖 AI-powered</span>
+              <span class="pmeta-item">☁️ SaaS + Midtrans billing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIM KTKL -->
+        <div class="clay-card portfolio-card">
+          <div class="portfolio-img-wrap">
+            <img src="assets/projects/sim-ktkl.png" alt="SIM KTKL - Sistem Kredensial Nakes" loading="lazy">
+            <div class="portfolio-overlay">
+              <a href="https://github.com/faishaltsq/sim-ktkl" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn" style="width:100%;">⭐ Lihat Repo</a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-tags">
+              <span class="ptag">Django</span>
+              <span class="ptag">Bootstrap 5</span>
+              <span class="ptag">PostgreSQL</span>
+              <span class="ptag">openpyxl</span>
+            </div>
+            <h3 class="portfolio-title">SIM KTKL — Kredensial Nakes RS</h3>
+            <p class="portfolio-desc">Manajemen komite tenaga kesehatan lainnya: tracking STR/SIP, evaluasi OPPE, manajemen etik & disiplin, import bulk Excel, dan ekspor laporan akreditasi.</p>
+            <div class="portfolio-meta">
+              <span class="pmeta-item">🏥 Healthcare IT</span>
+              <span class="pmeta-item">📊 Excel Import/Export</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ChatWeb Trading -->
+        <div class="clay-card portfolio-card">
+          <div class="portfolio-img-wrap">
+            <img src="assets/projects/chatweb-trading.png" alt="ChatWeb Trading - AI Trading Chat" loading="lazy">
+            <div class="portfolio-overlay">
+              <a href="https://github.com/faishaltsq/chatweb-trading" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn" style="width:100%;">⭐ Lihat Repo</a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-tags">
+              <span class="ptag">Next.js</span>
+              <span class="ptag">TypeScript</span>
+              <span class="ptag">AI/LLM</span>
+              <span class="ptag">Turso DB</span>
+            </div>
+            <h3 class="portfolio-title">ChatWeb Trading — AI Trading Assistant</h3>
+            <p class="portfolio-desc">Aplikasi chat berbasis AI untuk analisis trading. Integrasi LLM multi-provider via 9Router, persistent chat history dengan Turso (libSQL), dan autentikasi via NextAuth.</p>
+            <div class="portfolio-meta">
+              <span class="pmeta-item">💹 FinTech</span>
+              <span class="pmeta-item">🤖 Multi-LLM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DompetBareng -->
+        <div class="clay-card portfolio-card portfolio-card-wide">
+          <div class="portfolio-img-wrap portfolio-img-mobile">
+            <img src="assets/projects/dompet-bareng.png" alt="DompetBareng - Mobile Finance App" loading="lazy">
+            <div class="portfolio-overlay">
+              <a href="https://github.com/faishaltsq/dompet-bareng" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn" style="width:100%;">⭐ Lihat Repo</a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-tags">
+              <span class="ptag">React Native</span>
+              <span class="ptag">Expo SDK 57</span>
+              <span class="ptag">Supabase</span>
+              <span class="ptag">Gemini AI</span>
+            </div>
+            <h3 class="portfolio-title">DompetBareng — Manajemen Keuangan Bersama</h3>
+            <p class="portfolio-desc">Mobile app multi-workspace untuk keuangan keluarga & organisasi: real-time notifikasi Supabase, AI assistant berkarakter maskot otter, Google OAuth, invite link, dan download APK langsung.</p>
+            <div class="portfolio-meta">
+              <span class="pmeta-item">📱 iOS & Android</span>
+              <span class="pmeta-item">🧠 AI Assistant</span>
+              <span class="pmeta-item">⚡ Realtime</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
