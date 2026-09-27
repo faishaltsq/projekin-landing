@@ -693,7 +693,31 @@
       font-size: 0.92rem;
       color: var(--text-muted);
       line-height: 1.6;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-demo-hint {
+      background: #e4e7f2;
+      border-radius: 12px;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: inset 1px 1px 2px rgba(180, 185, 205, 0.25);
+    }
+
+    .portfolio-demo-hint code {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      background: #ffffff;
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: var(--primary-dark);
+      font-weight: 600;
     }
 
     .portfolio-meta {
@@ -1119,7 +1143,7 @@
           <div class="portfolio-img-wrap">
             <img src="assets/projects/sim-akreditasi.png" alt="SIM Akreditasi RS - Django Web App" loading="lazy">
             <div class="portfolio-overlay">
-              <a href="https://sim-akreditasi-web-production.up.railway.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">🔗 Live Demo</a>
+              <a href="https://sim-akreditasi-web-production.up.railway.app/accounts/login/" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">🔗 Live Demo (Read-Only)</a>
               <a href="https://github.com/faishaltsq/sim-akreditasi-django" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">⭐ Lihat Repo</a>
             </div>
           </div>
@@ -1132,6 +1156,9 @@
             </div>
             <h3 class="portfolio-title">SIM Akreditasi Rumah Sakit</h3>
             <p class="portfolio-desc">Sistem informasi manajemen akreditasi RS lengkap: matriks PDCA 7-kolom, auto-scoring KARS, manajemen dokumen multi-pokja, 13 role user, dan ekspor PDF resmi.</p>
+            <div class="portfolio-demo-hint">
+              <span>🔑 Demo read-only:</span> <code>asesor.kars</code> / <code>Asesor@1234</code>
+            </div>
             <div class="portfolio-meta">
               <span class="pmeta-item">🗂️ Full-stack Web App</span>
               <span class="pmeta-item">⚡ Enterprise Grade</span>
