@@ -10,22 +10,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #ebedf3;
-      --surface: #e6e8f0;
-      --card-bg: #f0f2f8;
-      --text-main: #1e2433;
-      --text-muted: #5e687e;
-      --text-soft: #8490a6;
-      --primary: #524eee;
-      --primary-light: #706df3;
-      --primary-dark: #3a37bb;
-      --accent: #ff6b8b;
-      --accent-teal: #10b981;
-      --clay-border: rgba(255, 255, 255, 0.7);
-      --clay-shadow-out: 10px 10px 22px rgba(166, 175, 195, 0.45), -10px -10px 22px rgba(255, 255, 255, 0.9);
-      --clay-shadow-out-sm: 5px 5px 12px rgba(166, 175, 195, 0.4), -5px -5px 12px rgba(255, 255, 255, 0.85);
-      --clay-shadow-in: inset 3px 3px 6px rgba(166, 175, 195, 0.35), inset -3px -3px 6px rgba(255, 255, 255, 0.85);
-      --clay-btn-shadow: 6px 6px 14px rgba(74, 70, 220, 0.35), -4px -4px 10px rgba(255, 255, 255, 0.8), inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+      --bg: #f2f3f7;
+      --surface: #eceef4;
+      --card-bg: #f6f7fb;
+      --text-main: #23263a;
+      --text-muted: #626880;
+      --text-soft: #9398b0;
+      --primary: #6c6af0;
+      --primary-light: #8886f5;
+      --primary-dark: #4e4cc0;
+      --accent: #f87fa0;
+      --accent-teal: #34d399;
+      --clay-border: rgba(255, 255, 255, 0.75);
+      --clay-shadow-out: 8px 8px 18px rgba(180, 185, 205, 0.38), -8px -8px 18px rgba(255, 255, 255, 0.92);
+      --clay-shadow-out-sm: 4px 4px 10px rgba(180, 185, 205, 0.32), -4px -4px 10px rgba(255, 255, 255, 0.88);
+      --clay-shadow-in: inset 3px 3px 7px rgba(180, 185, 205, 0.28), inset -3px -3px 7px rgba(255, 255, 255, 0.88);
+      --clay-btn-shadow: 5px 5px 12px rgba(108, 106, 240, 0.22), -3px -3px 8px rgba(255, 255, 255, 0.85), inset 1px 1px 2px rgba(255, 255, 255, 0.45);
       --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
@@ -47,9 +47,7 @@
       line-height: 1.6;
       overflow-x: hidden;
       min-height: 100vh;
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 85% 65%, rgba(255, 107, 139, 0.07) 0%, transparent 45%);
+      /* clean flat background */
     }
 
     /* Clay Utility Classes */
@@ -63,7 +61,7 @@
 
     .clay-card:hover {
       transform: translateY(-4px);
-      box-shadow: 14px 14px 28px rgba(166, 175, 195, 0.5), -12px -12px 28px rgba(255, 255, 255, 0.95);
+      box-shadow: 12px 12px 24px rgba(180, 185, 205, 0.42), -10px -10px 24px rgba(255, 255, 255, 0.96);
     }
 
     .clay-pill {
@@ -81,10 +79,10 @@
     }
 
     .clay-inset {
-      background: #e2e5ed;
+      background: #e8ebf3;
       border-radius: 20px;
       box-shadow: var(--clay-shadow-in);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.5);
     }
 
     .clay-btn {
@@ -92,14 +90,14 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      background: var(--primary);
       color: #ffffff;
       padding: 14px 28px;
       border-radius: 999px;
       font-weight: 700;
       text-decoration: none;
       font-size: 1rem;
-      border: 2px solid rgba(255, 255, 255, 0.4);
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
       box-shadow: var(--clay-btn-shadow);
       cursor: pointer;
       transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -108,7 +106,7 @@
 
     .clay-btn:hover {
       transform: scale(1.03) translateY(-2px);
-      box-shadow: 8px 8px 18px rgba(74, 70, 220, 0.45), -6px -6px 14px rgba(255, 255, 255, 0.9);
+      box-shadow: 6px 6px 14px rgba(108, 106, 240, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.9);
       color: #ffffff;
     }
 
@@ -144,7 +142,7 @@
       z-index: 100;
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      background: rgba(235, 237, 243, 0.75);
+      background: rgba(242, 243, 247, 0.8);
     }
 
     .nav-wrapper {
@@ -168,7 +166,7 @@
     .logo-badge {
       width: 36px;
       height: 36px;
-      background: linear-gradient(135deg, #706df3, #ff6b8b);
+      background: var(--primary);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -227,9 +225,7 @@
     }
 
     .hero-title .gradient-text {
-      background: linear-gradient(135deg, var(--primary) 0%, #a855f7 50%, var(--accent) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--primary);
     }
 
     .hero-desc {
@@ -334,7 +330,7 @@
     }
 
     .service-card.highlight {
-      background: linear-gradient(160deg, #f5f6fc 0%, #ebeef8 100%);
+      background: #eef0f7;
       border-color: rgba(112, 109, 243, 0.35);
     }
 
@@ -356,7 +352,7 @@
       position: absolute;
       top: 32px;
       right: 32px;
-      background: linear-gradient(135deg, #10b981, #059669);
+      background: var(--accent-teal);
       color: white;
       font-size: 0.75rem;
       font-weight: 700;
@@ -612,7 +608,7 @@
     .cta-banner {
       padding: 64px 40px;
       text-align: center;
-      background: linear-gradient(145deg, #f5f6fd, #e4e7f3);
+      background: var(--card-bg);
       position: relative;
       overflow: hidden;
     }
