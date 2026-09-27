@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projek.in — Technical Partner & Engineering Mentorship IT</title>
+  <meta name="description" content="Partner teknis pengerjaan project IT dan pendampingan skripsi/tugas akhir teknologi informasi. Clean code, transparan, diajarin sampai paham.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ebedf3;
+      --surface: #e6e8f0;
+      --card-bg: #f0f2f8;
+      --text-main: #1e2433;
+      --text-muted: #5e687e;
+      --text-soft: #8490a6;
+      --primary: #524eee;
+      --primary-light: #706df3;
+      --primary-dark: #3a37bb;
+      --accent: #ff6b8b;
+      --accent-teal: #10b981;
+      --clay-border: rgba(255, 255, 255, 0.7);
+      --clay-shadow-out: 10px 10px 22px rgba(166, 175, 195, 0.45), -10px -10px 22px rgba(255, 255, 255, 0.9);
+      --clay-shadow-out-sm: 5px 5px 12px rgba(166, 175, 195, 0.4), -5px -5px 12px rgba(255, 255, 255, 0.85);
+      --clay-shadow-in: inset 3px 3px 6px rgba(166, 175, 195, 0.35), inset -3px -3px 6px rgba(255, 255, 255, 0.85);
+      --clay-btn-shadow: 6px 6px 14px rgba(74, 70, 220, 0.35), -4px -4px 10px rgba(255, 255, 255, 0.8), inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 65%, rgba(255, 107, 139, 0.07) 0%, transparent 45%);
+    }
+
+    /* Clay Utility Classes */
+    .clay-card {
+      background: var(--card-bg);
+      border-radius: 28px;
+      border: 2px solid var(--clay-border);
+      box-shadow: var(--clay-shadow-out);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .clay-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 14px 14px 28px rgba(166, 175, 195, 0.5), -12px -12px 28px rgba(255, 255, 255, 0.95);
+    }
+
+    .clay-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card-bg);
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1.5px solid var(--clay-border);
+      box-shadow: var(--clay-shadow-out-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .clay-inset {
+      background: #e2e5ed;
+      border-radius: 20px;
+      box-shadow: var(--clay-shadow-in);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .clay-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      box-shadow: var(--clay-btn-shadow);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      min-height: 48px;
+    }
+
+    .clay-btn:hover {
+      transform: scale(1.03) translateY(-2px);
+      box-shadow: 8px 8px 18px rgba(74, 70, 220, 0.45), -6px -6px 14px rgba(255, 255, 255, 0.9);
+      color: #ffffff;
+    }
+
+    .clay-btn:active {
+      transform: scale(0.98);
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .clay-btn-secondary {
+      background: var(--card-bg);
+      color: var(--text-main);
+      box-shadow: var(--clay-shadow-out-sm);
+      border: 2px solid var(--clay-border);
+    }
+
+    .clay-btn-secondary:hover {
+      box-shadow: 8px 8px 18px rgba(166, 175, 195, 0.45), -6px -6px 14px rgba(255, 255, 255, 0.95);
+      color: var(--primary);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header Nav */
+    header {
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(235, 237, 243, 0.75);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-badge {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #706df3, #ff6b8b);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 800;
+      box-shadow: 4px 4px 10px rgba(112, 109, 243, 0.35), inset 1px 1px 2px rgba(255,255,255,0.7);
+      border: 1.5px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 60px 0 80px;
+      text-align: center;
+    }
+
+    .hero-badge-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -1.2px;
+      color: var(--text-main);
+      max-width: 860px;
+      margin: 0 auto 20px;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, var(--primary) 0%, #a855f7 50%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    /* Trust highlights */
+    .trust-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      padding: 20px 28px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .trust-icon {
+      width: 24px;
+      height: 24px;
+      background: #e1e4ed;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-teal);
+      font-size: 0.85rem;
+      box-shadow: inset 1px 1px 3px rgba(0,0,0,0.15);
+    }
+
+    /* Section Headers */
+    .section-head {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 52px;
+    }
+
+    .section-tag {
+      color: var(--primary);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      color: var(--text-main);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Layanan Section - Asymmetric Cards */
+    .services {
+      padding: 60px 0 90px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .service-card {
+      padding: 40px 36px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-card.highlight {
+      background: linear-gradient(160deg, #f5f6fc 0%, #ebeef8 100%);
+      border-color: rgba(112, 109, 243, 0.35);
+    }
+
+    .service-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      background: var(--card-bg);
+      border: 2px solid var(--clay-border);
+      box-shadow: var(--clay-shadow-out-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+
+    .service-badge-tag {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      box-shadow: 2px 2px 8px rgba(16, 185, 129, 0.4);
+    }
+
+    .service-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    .service-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .service-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.93rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .feature-check {
+      color: var(--primary);
+      font-weight: 800;
+      margin-top: 1px;
+    }
+
+    /* Interactive WA Generator / Calculator */
+    .calculator-section {
+      padding: 30px 0 80px;
+    }
+
+    .calc-card {
+      padding: 44px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+
+    .calc-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .clay-select, .clay-input {
+      width: 100%;
+      padding: 14px 18px;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      background: #e2e5ed;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 16px;
+      box-shadow: var(--clay-shadow-in);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .clay-select:focus, .clay-input:focus {
+      border-color: var(--primary-light);
+      background: #dadde7;
+    }
+
+    .preview-box {
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+
+    .preview-header {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .preview-message {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: var(--text-main);
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.5;
+    }
+
+    /* Cara Kerja / Workflow */
+    .workflow {
+      padding: 60px 0 90px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      padding: 32px 24px;
+      text-align: left;
+      position: relative;
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: var(--card-bg);
+      border: 2px solid var(--clay-border);
+      box-shadow: var(--clay-shadow-out-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .step-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+
+    .step-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Tech Stack Pills */
+    .stack-section {
+      padding: 40px 0 80px;
+      text-align: center;
+    }
+
+    .stack-pills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .tech-pill {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: var(--card-bg);
+      border: 1.5px solid var(--clay-border);
+      box-shadow: var(--clay-shadow-out-sm);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 60px 0 100px;
+    }
+
+    .faq-container {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    details.clay-card {
+      padding: 22px 28px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    summary {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      outline: none;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-family: var(--font-mono);
+      font-size: 1.4rem;
+      color: var(--primary);
+      transition: transform 0.2s ease;
+      margin-left: 12px;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    details p {
+      margin-top: 16px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* Final CTA Banner */
+    .final-cta {
+      padding: 0 0 100px;
+    }
+
+    .cta-banner {
+      padding: 64px 40px;
+      text-align: center;
+      background: linear-gradient(145deg, #f5f6fd, #e4e7f3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner-title {
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 16px;
+    }
+
+    .cta-banner-desc {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 2px solid rgba(255, 255, 255, 0.6);
+      text-align: center;
+      color: var(--text-soft);
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 860px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .calc-card {
+        padding: 24px 20px;
+      }
+      .service-card {
+        padding: 28px 24px;
+      }
+      .trust-bar {
+        gap: 16px;
+      }
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Nav -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <span class="logo-badge">&lt;/&gt;</span>
+        <span>Projek.in</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#alur">Alur Kerja</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#kalkulator">Estimasi</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20mau%20konsultasi%20project%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn nav-cta-btn">
+        Konsultasi WA
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge-container">
+        <div class="clay-pill">
+          <span>⚡</span>
+          <span>Technical Partner & Code Mentorship</span>
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        Ide Project Ada, Waktu Mentok? <br>
+        <span class="gradient-text">Biar Kami yang Dampingi Eksekusi.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Solusi rekayasa perangkat lunak untuk pengerjaan project aplikasi, web, sistem terintegrasi, hingga pendampingan skripsi IT dari nol sampai siap sidang. Clean code, transparan, diajarin sampai paham.
+      </p>
+
+      <div class="hero-actions">
+        <a id="heroWaBtn" href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20mau%20tanya%20layanan%20project%20atau%20skripsi%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn">
+          <span>💬</span> Chat WhatsApp Sekarang
+        </a>
+        <a href="#layanan" class="clay-btn clay-btn-secondary">
+          Eksplor Layanan
+        </a>
+      </div>
+
+      <!-- Trust highlights -->
+      <div class="clay-card trust-bar">
+        <div class="trust-item">
+          <span class="trust-icon">✓</span>
+          <span>100% Rahasia & Aman</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">✓</span>
+          <span>Clean Code & Terstruktur</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">✓</span>
+          <span>Bimbingan Sesi Live Meet</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">✓</span>
+          <span>Garansi Revisi Sesuai Spek</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layanan Section -->
+  <section id="layanan" class="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Layanan Kami</span>
+        <h2 class="section-title">Solusi Teknis Tanpa Bikin Pusing</h2>
+        <p class="section-desc">Pilih skema pengerjaan sesuai kebutuhanmu: bangun software siap pakai atau bimbingan intensif tugas akhir.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="clay-card service-card highlight">
+          <span class="service-badge-tag">Paling Populer</span>
+          <div>
+            <div class="service-icon-wrap">💻</div>
+            <h3 class="service-title">Software & Project Development</h3>
+            <p class="service-desc">Pembangunan aplikasi lengkap dari perancangan arsitektur, frontend, backend API, integrasi database, hingga deployment siap uji.</p>
+            <ul class="service-features">
+              <li><span class="feature-check">✔</span> Full-stack Web Apps (React, Next.js, Laravel, Django, NestJS)</li>
+              <li><span class="feature-check">✔</span> Mobile Apps (Flutter, React Native) iOS & Android</li>
+              <li><span class="feature-check">✔</span> Implementasi AI / Machine Learning, IoT, & Data Science</li>
+              <li><span class="feature-check">✔</span> Source code rapi, dokumentasi instalasi, panduan arsitektur</li>
+              <li><span class="feature-check">✔</span> Gratis perbaikan bug & pendampingan demo sistem</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20dengan%20layanan%20Software%20%26%20Project%20Development" target="_blank" rel="noopener noreferrer" class="clay-btn">
+            Mulai Diskusi Project
+          </a>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="clay-card service-card">
+          <div>
+            <div class="service-icon-wrap">🎓</div>
+            <h3 class="service-title">Pendampingan Skripsi & Tugas Akhir IT</h3>
+            <p class="service-desc">Mentorship teknis intensif bagi mahasiswa informatika/ilmu komputer. Kami bantu pecahkan logic codingan dan persiapan menghadapi dosen penguji.</p>
+            <ul class="service-features">
+              <li><span class="feature-check">✔</span> Perancangan Use Case, ERD, Class Diagram, & Flowchart</li>
+              <li><span class="feature-check">✔</span> Bedah logika source code baris demi baris via Google Meet</li>
+              <li><span class="feature-check">✔</span> Pendampingan penulisan Bab 3, 4, dan 5 (Bab Implementasi)</li>
+              <li><span class="feature-check">✔</span> Simulasi tanya jawab teknis sebelum seminar proposal / sidang</li>
+              <li><span class="feature-check">✔</span> Kamu paham 100% cara kerja aplikasi saat diuji dosen</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20butuh%20pendampingan%20teknis%20untuk%20Skripsi%2FTugas%20Akhir%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn clay-btn-secondary">
+            Konsultasi Skripsi
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive WA Generator -->
+  <section id="kalkulator" class="calculator-section">
+    <div class="container">
+      <div class="clay-card calc-card">
+        <div class="section-head" style="margin-bottom: 32px;">
+          <span class="section-tag">Direct Chat Builder</span>
+          <h2 class="section-title">Kirim Brief Tanpa Bingung Basa-Basi</h2>
+          <p class="section-desc">Pilih kebutuhanmu di bawah, kami siapkan template pesan WhatsApp otomatis.</p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-group">
+            <label for="calcService">Jenis Kebutuhan</label>
+            <select id="calcService" class="clay-select" onchange="updateWaMessage()">
+              <option value="Pendampingan Skripsi / Tugas Akhir IT">Pendampingan Skripsi / Tugas Akhir IT</option>
+              <option value="Pembuatan Web Application">Pembuatan Web Application</option>
+              <option value="Pembuatan Mobile App (Android / iOS)">Pembuatan Mobile App (Android / iOS)</option>
+              <option value="Project AI / Machine Learning / Data">Project AI / Machine Learning / Data</option>
+              <option value="Fixing Bug / Refactor Sistem">Fixing Bug / Refactor Sistem</option>
+            </select>
+          </div>
+
+          <div class="calc-group">
+            <label for="calcDeadline">Target Waktu / Deadline</label>
+            <select id="calcDeadline" class="clay-select" onchange="updateWaMessage()">
+              <option value="Santai (> 1 bulan)">Santai (> 1 bulan)</option>
+              <option value="Standar (2 - 4 minggu)">Standar (2 - 4 minggu)</option>
+              <option value="Prioritas (1 - 2 minggu)">Prioritas (1 - 2 minggu)</option>
+              <option value="Urgent / Kilat (< 7 hari)">Urgent / Kilat (&lt; 7 hari)</option>
+            </select>
+          </div>
+
+          <div class="calc-group">
+            <label for="calcStack">Preferensi Tech Stack (Opsional)</label>
+            <input type="text" id="calcStack" class="clay-input" placeholder="Misal: Next.js + Supabase, Laravel, Flutter..." oninput="updateWaMessage()">
+          </div>
+
+          <div class="calc-group">
+            <label for="calcDetail">Catatan Singkat</label>
+            <input type="text" id="calcDetail" class="clay-input" placeholder="Misal: Sudah ada judul, butuh bantuan coding & ERD..." oninput="updateWaMessage()">
+          </div>
+        </div>
+
+        <div class="clay-inset preview-box">
+          <div class="preview-header">Preview Pesan WhatsApp:</div>
+          <div id="previewText" class="preview-message">Halo Projek.in, saya mau konsultasi...</div>
+        </div>
+
+        <div style="text-align: center;">
+          <a id="calcWaLink" href="#" target="_blank" rel="noopener noreferrer" class="clay-btn" style="min-width: 260px;">
+            <span>🚀</span> Kirim ke WhatsApp Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cara Kerja Section -->
+  <section id="alur" class="workflow">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Alur Transparan</span>
+        <h2 class="section-title">4 Langkah Mudah Kerja Bareng</h2>
+        <p class="section-desc">Proses terstruktur tanpa tebak-tebakan, progres selalu bisa kamu pantau.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="clay-card step-card">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Diskusi Brief</h3>
+          <p class="step-desc">Kirimkan rincian kebutuhan, panduan kampus/klien, atau ide kasar. Kami review kelayakan dan ruang lingkup teknisnya.</p>
+        </div>
+
+        <div class="clay-card step-card">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Scope & Kesepakatan</h3>
+          <p class="step-desc">Penetapan target pengerjaan, deadline bertahap, dan skema pembayaran yang transparan tanpa biaya tersembunyi.</p>
+        </div>
+
+        <div class="clay-card step-card">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Coding & Demo Rutin</h3>
+          <p class="step-desc">Pengerjaan dengan clean code. Kamu menerima demo progres berkala agar tidak ada hasil yang melenceng dari brief.</p>
+        </div>
+
+        <div class="clay-card step-card">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Bedah Kode & Handover</h3>
+          <p class="step-desc">Serah terima source code, panduan instalasi, dan sesi Google Meet untuk membedah arsitektur sampai kamu paham 100%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section id="stack" class="stack-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Teknologi Modern</span>
+        <h2 class="section-title">Tech Stack yang Kami Kuasai</h2>
+        <p class="section-desc">Kami menggunakan standar industri terkini, memastikan aplikasi scalable, cepat, dan mudah dipahami.</p>
+      </div>
+
+      <div class="stack-pills-wrap">
+        <span class="tech-pill">⚡ Next.js / React</span>
+        <span class="tech-pill">🌐 Vue.js / Nuxt</span>
+        <span class="tech-pill">🐘 Laravel / PHP</span>
+        <span class="tech-pill">🐍 Python / FastAPI / Django</span>
+        <span class="tech-pill">🟢 Node.js / NestJS / Express</span>
+        <span class="tech-pill">📱 Flutter (Android/iOS)</span>
+        <span class="tech-pill">⚛️ React Native / Expo</span>
+        <span class="tech-pill">🗄️ PostgreSQL / MySQL / Supabase</span>
+        <span class="tech-pill">🍃 MongoDB / Redis</span>
+        <span class="tech-pill">🤖 TensorFlow / PyTorch / YOLO</span>
+        <span class="tech-pill">🐳 Docker & Cloud Deployment</span>
+        <span class="tech-pill">📊 PowerBI / Streamlit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Tanya Jawab</span>
+        <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+        <p class="section-desc">Transparansi nomor satu. Berikut hal-hal penting yang sering ditanyakan partner kami.</p>
+      </div>
+
+      <div class="faq-container">
+        <details class="clay-card">
+          <summary>Gimana kalau pas sidang dosen nanya detail kodingan?</summary>
+          <p>Itulah keunggulan utama <strong>Projek.in</strong>. Kami tidak cuma memberikan file jadi, tetapi menyediakan sesi walkthrough (Google Meet/Zoom) untuk membedah flow logika, arsitektur database, dan algoritma baris per baris. Kami juga siap memberikan rangkuman kisi-kisi teknis yang biasa ditanyakan penguji.</p>
+        </details>
+
+        <details class="clay-card">
+          <summary>Apakah identitas dan data project saya aman?</summary>
+          <p>Sangat aman. Kami memegang komitmen kerahasiaan penuh (NDA). Nama, institusi, maupun kode program kamu tidak akan pernah dipublikasikan atau dijadikan portofolio publik tanpa izin tertulis dari kamu.</p>
+        </details>
+
+        <details class="clay-card">
+          <summary>Berapa lama estimasi waktu pengerjaannya?</summary>
+          <p>Tergantung kompleksitas fitur. Untuk project skala kecil hingga menengah biasanya memakan waktu 1–2 minggu. Untuk skripsi komprehensif atau aplikasi full-stack enterprise bisa 2–4 minggu. Kami juga menyediakan opsi pengerjaan express jika kamu dikejar deadline mendesak.</p>
+        </details>
+
+        <details class="clay-card">
+          <summary>Bagaimana sistem pembayarannya?</summary>
+          <p>Sangat fleksibel dan aman. Pembayaran dilakukan dengan sistem termin: DP (Down Payment) untuk memulai, pembayaran kedua setelah ada demo progress, dan pelunasan saat source code final diserahterimakan beserta sesi penjelasan.</p>
+        </details>
+
+        <details class="clay-card">
+          <summary>Kalau dosen minta revisi fitur kodingan, apakah masih dibantu?</summary>
+          <p>Tentu saja! Kami memberikan masa garansi revisi gratis sesuai dengan ruang lingkup (scope) yang telah disepakati di awal sampai project kamu benar-benar lolos dan disetujui.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Banner -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="clay-card cta-banner">
+        <h2 class="cta-banner-title">Siap Tuntaskan Project Tanpa Stres?</h2>
+        <p class="cta-banner-desc">Konsultasikan kebutuhanmu sekarang. Gratis tanya-tanya, diskusikan arsitektur, dan dapatkan estimasi terbaik hari ini.</p>
+        <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20mau%20konsultasi%20project%2Fskripsi%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn" style="font-size: 1.1rem; padding: 16px 36px;">
+          <span>💬</span> Chat Tim Projek.in via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div style="font-weight: 700; color: var(--text-main);">
+        Projek.in — Technical Partner & Engineering Mentorship
+      </div>
+      <div>
+        Hubungi kami: <a href="https://wa.me/62859106831589" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">+62 859-1068-31589</a>
+      </div>
+      <div>
+        &copy; 2026 Projek.in. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for WhatsApp Generator -->
+  <script>
+    function updateWaMessage() {
+      const service = document.getElementById('calcService').value;
+      const deadline = document.getElementById('calcDeadline').value;
+      const stack = document.getElementById('calcStack').value.trim();
+      const detail = document.getElementById('calcDetail').value.trim();
+
+      let msg = `Halo Tim Projek.in,\nSaya mau konsultasi:\n- Layanan: ${service}\n- Target Waktu: ${deadline}`;
+      if (stack) {
+        msg += `\n- Tech Stack: ${stack}`;
+      }
+      if (detail) {
+        msg += `\n- Catatan: ${detail}`;
+      }
+      msg += `\nMohon info estimasi biaya dan ketersediaan slot pengerjaan. Terima kasih!`;
+
+      document.getElementById('previewText').textContent = msg;
+
+      const phone = "62859106831589";
+      const encodedMsg = encodeURIComponent(msg);
+      const waUrl = `https://wa.me/${phone}?text=${encodedMsg}`;
+      document.getElementById('calcWaLink').href = waUrl;
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      updateWaMessage();
+    });
+  </script>
+</body>
+</html>
