@@ -343,17 +343,21 @@
     }
 
     .service-icon-wrap {
-      width: 64px;
-      height: 64px;
-      border-radius: 20px;
-      background: var(--card-bg);
-      border: 2px solid var(--clay-border);
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--primary);
+      border: none;
       box-shadow: var(--clay-shadow-out-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
       margin-bottom: 24px;
+      color: #ffffff;
+    }
+
+    .service-icon-wrap svg {
+      stroke: #ffffff;
     }
 
     .service-badge-tag {
@@ -404,7 +408,14 @@
     .feature-check {
       color: var(--primary);
       font-weight: 800;
-      margin-top: 1px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .feature-check svg {
+      stroke: var(--primary);
     }
 
     /* Interactive WA Generator / Calculator */
@@ -882,7 +893,6 @@
     <div class="container">
       <div class="hero-badge-container">
         <div class="clay-pill">
-          <span>⚡</span>
           <span>Freelance Software Engineer & IT Solution</span>
         </div>
       </div>
@@ -898,7 +908,7 @@
 
       <div class="hero-actions">
         <a id="heroWaBtn" href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20untuk%20diskusi%20project%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn">
-          <span>💬</span> Chat WhatsApp Sekarang
+          Chat WhatsApp Sekarang
         </a>
         <a href="#portfolio" class="clay-btn clay-btn-secondary">
           Lihat Portofolio
@@ -953,15 +963,15 @@
         <div class="clay-card service-card highlight">
           <span class="service-badge-tag">Paling Populer</span>
           <div>
-            <div class="service-icon-wrap">💻</div>
+            <div class="service-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
             <h3 class="service-title">Web & Mobile App Development</h3>
             <p class="service-desc">Pembangunan aplikasi web modern dan mobile app cross-platform dari ide/Figma hingga siap live diakses pengguna.</p>
             <ul class="service-features">
-              <li><span class="feature-check">✔</span> Full-stack Web Apps (React, Next.js, Django, Laravel, Vue)</li>
-              <li><span class="feature-check">✔</span> Mobile Apps Cross-Platform (React Native, Expo, Flutter)</li>
-              <li><span class="feature-check">✔</span> Dashboard Admin, SaaS, Portal Bisnis, & E-Commerce</li>
-              <li><span class="feature-check">✔</span> Desain responsif, clean UI/UX, dan optimasi performa tinggi</li>
-              <li><span class="feature-check">✔</span> Setup domain, SSL, dan deployment ke cloud (Vercel, Railway, VPS)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Full-stack Web Apps (React, Next.js, Django, Laravel, Vue)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Mobile Apps Cross-Platform (React Native, Expo, Flutter)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Dashboard Admin, SaaS, Portal Bisnis, & E-Commerce</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Desain responsif, clean UI/UX, dan optimasi performa tinggi</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Setup domain, SSL, dan deployment ke cloud (Vercel, Railway, VPS)</li>
             </ul>
           </div>
           <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20dengan%20layanan%20Web%20%26%20Mobile%20App%20Development" target="_blank" rel="noopener noreferrer" class="clay-btn">
@@ -972,15 +982,15 @@
         <!-- Service Card 2 -->
         <div class="clay-card service-card">
           <div>
-            <div class="service-icon-wrap">⚡</div>
+            <div class="service-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
             <h3 class="service-title">Backend API, AI & Automation</h3>
             <p class="service-desc">Layanan pengembangan backend scalable, integrasi model kecerdasan buatan (AI/LLM), serta otomatisasi sistem dan bot.</p>
             <ul class="service-features">
-              <li><span class="feature-check">✔</span> RESTful & GraphQL API berarsitektur clean (NestJS, Django, FastAPI)</li>
-              <li><span class="feature-check">✔</span> Integrasi AI / LLM (OpenAI, Claude, custom chatbot & workflow)</li>
-              <li><span class="feature-check">✔</span> Desain & migrasi database (PostgreSQL, Supabase, MySQL, Redis)</li>
-              <li><span class="feature-check">✔</span> Otomatisasi script data scraping, bot Telegram, & E2E Testing (Playwright)</li>
-              <li><span class="feature-check">✔</span> Integrasi Payment Gateway (Midtrans) & Third-Party Webhooks</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> RESTful & GraphQL API berarsitektur clean (NestJS, Django, FastAPI)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Integrasi AI / LLM (OpenAI, Claude, custom chatbot & workflow)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Desain & migrasi database (PostgreSQL, Supabase, MySQL, Redis)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Otomatisasi script data scraping, bot Telegram, & E2E Testing (Playwright)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Integrasi Payment Gateway (Midtrans) & Third-Party Webhooks</li>
             </ul>
           </div>
           <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20dengan%20layanan%20Backend%20API%2C%20AI%20%26%20Automation" target="_blank" rel="noopener noreferrer" class="clay-btn clay-btn-secondary">
@@ -1041,7 +1051,7 @@
 
         <div style="text-align: center;">
           <a id="calcWaLink" href="#" target="_blank" rel="noopener noreferrer" class="clay-btn" style="min-width: 260px;">
-            <span>🚀</span> Kirim ke WhatsApp Sekarang
+            <span>Kirim ke WhatsApp Sekarang
           </a>
         </div>
       </div>
@@ -1095,18 +1105,18 @@
       </div>
 
       <div class="stack-pills-wrap">
-        <span class="tech-pill">⚡ Next.js / React</span>
-        <span class="tech-pill">🌐 Vue.js / Nuxt</span>
-        <span class="tech-pill">🐘 Laravel / PHP</span>
-        <span class="tech-pill">🐍 Python / FastAPI / Django</span>
-        <span class="tech-pill">🟢 Node.js / NestJS / Express</span>
-        <span class="tech-pill">📱 Flutter (Android/iOS)</span>
-        <span class="tech-pill">⚛️ React Native / Expo</span>
-        <span class="tech-pill">🗄️ PostgreSQL / MySQL / Supabase</span>
-        <span class="tech-pill">🍃 MongoDB / Redis</span>
-        <span class="tech-pill">🤖 TensorFlow / PyTorch / YOLO</span>
-        <span class="tech-pill">🐳 Docker & Cloud Deployment</span>
-        <span class="tech-pill">📊 PowerBI / Streamlit</span>
+        <span class="tech-pill">Next.js / React</span>
+        <span class="tech-pill">Vue.js / Nuxt</span>
+        <span class="tech-pill">Laravel / PHP</span>
+        <span class="tech-pill">Python / FastAPI / Django</span>
+        <span class="tech-pill">Node.js / NestJS / Express</span>
+        <span class="tech-pill">Flutter (Android/iOS)</span>
+        <span class="tech-pill">React Native / Expo</span>
+        <span class="tech-pill">PostgreSQL / MySQL / Supabase</span>
+        <span class="tech-pill">MongoDB / Redis</span>
+        <span class="tech-pill">TensorFlow / PyTorch / YOLO</span>
+        <span class="tech-pill">Docker & Cloud Deployment</span>
+        <span class="tech-pill">PowerBI / Streamlit</span>
       </div>
     </div>
   </section>
@@ -1127,8 +1137,8 @@
           <div class="portfolio-img-wrap">
             <img src="assets/projects/sim-akreditasi.png" alt="SIM Akreditasi RS - Django Web App" loading="lazy">
             <div class="portfolio-overlay">
-              <a href="https://sim-akreditasi-web-production.up.railway.app/accounts/login/" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">🔗 Live Demo (Read-Only)</a>
-              <a href="https://github.com/faishaltsq/sim-akreditasi-django" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">⭐ Lihat Repo</a>
+              <a href="https://sim-akreditasi-web-production.up.railway.app/accounts/login/" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">Live Demo (Read-Only)</a>
+              <a href="https://github.com/faishaltsq/sim-akreditasi-django" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">Lihat Repo</a>
             </div>
           </div>
           <div class="portfolio-content">
@@ -1141,18 +1151,18 @@
             <h3 class="portfolio-title">SIM Akreditasi Rumah Sakit</h3>
             <p class="portfolio-desc">Sistem informasi manajemen akreditasi RS lengkap: matriks PDCA 7-kolom, auto-scoring KARS, manajemen dokumen multi-pokja, 13 role user, dan ekspor PDF resmi.</p>
             <div class="portfolio-demo-hint">
-              <span>🔑 Demo read-only:</span> <code>asesor.kars</code> / <code>Asesor@1234</code>
+              <span>Demo read-only:</span> <code>asesor.kars</code> / <code>Asesor@1234</code>
             </div>
             <div class="portfolio-meta">
-              <span class="pmeta-item">🗂️ Full-stack Web App</span>
-              <span class="pmeta-item">⚡ Enterprise Grade</span>
+              <span class="pmeta-item">Full-stack Web App</span>
+              <span class="pmeta-item">Enterprise Grade</span>
             </div>
             <div style="display:flex; gap:10px; margin-top:16px; flex-wrap:wrap;">
               <a href="https://sim-akreditasi-web-production.up.railway.app/accounts/login/" target="_blank" rel="noopener noreferrer" class="clay-btn" style="font-size:0.85rem; padding:10px 18px; min-height:unset;">
-                🔗 Coba Demo
+                Coba Demo
               </a>
               <a href="https://github.com/faishaltsq/sim-akreditasi-django" target="_blank" rel="noopener noreferrer" class="clay-btn clay-btn-secondary" style="font-size:0.85rem; padding:10px 18px; min-height:unset;">
-                ⭐ Source Code
+                Source Code
               </a>
             </div>
           </div>
@@ -1163,8 +1173,8 @@
           <div class="portfolio-img-wrap">
             <img src="assets/projects/web-weave.png" alt="WebWeave - AI QA Automation Generator" loading="lazy">
             <div class="portfolio-overlay">
-              <a href="https://web-weave-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">🔗 Live Demo</a>
-              <a href="https://github.com/faishaltsq/Web-Weave" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">⭐ Lihat Repo</a>
+              <a href="https://web-weave-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">Live Demo</a>
+              <a href="https://github.com/faishaltsq/Web-Weave" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">Lihat Repo</a>
             </div>
           </div>
           <div class="portfolio-content">
@@ -1177,8 +1187,8 @@
             <h3 class="portfolio-title">WebWeave — AI QA Automation</h3>
             <p class="portfolio-desc">Generator skrip automation testing berbasis AI. Scan DOM halaman target, ekstrak locator kandidat, dan generate skrip Playwright/Cypress/Selenium otomatis via LLM.</p>
             <div class="portfolio-meta">
-              <span class="pmeta-item">🤖 AI-powered</span>
-              <span class="pmeta-item">☁️ SaaS + Midtrans billing</span>
+              <span class="pmeta-item">AI-Powered</span>
+              <span class="pmeta-item">SaaS + Midtrans Billing</span>
             </div>
           </div>
         </div>
@@ -1188,7 +1198,7 @@
           <div class="portfolio-img-wrap">
             <img src="assets/projects/chatweb-trading.png" alt="ChatWeb Trading - AI Trading Chat" loading="lazy">
             <div class="portfolio-overlay">
-              <a href="https://github.com/faishaltsq/chatweb-trading" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn" style="width:100%;">⭐ Lihat Repo</a>
+              <a href="https://github.com/faishaltsq/chatweb-trading" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn" style="width:100%;">Lihat Repo</a>
             </div>
           </div>
           <div class="portfolio-content">
@@ -1201,8 +1211,8 @@
             <h3 class="portfolio-title">ChatWeb Trading — AI Trading Assistant</h3>
             <p class="portfolio-desc">Aplikasi chat berbasis AI untuk analisis trading. Integrasi LLM multi-provider via 9Router, persistent chat history dengan Turso (libSQL), dan autentikasi via NextAuth.</p>
             <div class="portfolio-meta">
-              <span class="pmeta-item">💹 FinTech</span>
-              <span class="pmeta-item">🤖 Multi-LLM</span>
+              <span class="pmeta-item">FinTech</span>
+              <span class="pmeta-item">Multi-LLM</span>
             </div>
           </div>
         </div>
@@ -1212,8 +1222,8 @@
           <div class="portfolio-img-wrap mobile-frame">
             <img src="assets/projects/dompet-bareng.png" alt="DompetBareng - Mobile Finance App" loading="lazy">
             <div class="portfolio-overlay">
-              <a href="https://dompet-bareng.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">🔗 Live Web App</a>
-              <a href="https://github.com/faishaltsq/dompet-bareng" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">⭐ Lihat Repo</a>
+              <a href="https://dompet-bareng.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">Live Web App</a>
+              <a href="https://github.com/faishaltsq/dompet-bareng" target="_blank" rel="noopener noreferrer" class="portfolio-repo-btn">Lihat Repo</a>
             </div>
           </div>
           <div class="portfolio-content">
@@ -1226,9 +1236,9 @@
             <h3 class="portfolio-title">DompetBareng — Manajemen Keuangan Bersama</h3>
             <p class="portfolio-desc">Mobile app multi-workspace untuk keuangan keluarga & organisasi: real-time notifikasi Supabase, AI assistant berkarakter maskot otter, Google OAuth, invite link, dan download APK langsung.</p>
             <div class="portfolio-meta">
-              <span class="pmeta-item">📱 iOS & Android</span>
-              <span class="pmeta-item">🧠 AI Assistant</span>
-              <span class="pmeta-item">⚡ Realtime</span>
+              <span class="pmeta-item">iOS & Android</span>
+              <span class="pmeta-item">AI Assistant</span>
+              <span class="pmeta-item">Realtime</span>
             </div>
           </div>
         </div>
@@ -1244,7 +1254,7 @@
         <h2 class="cta-banner-title">Punya Project yang Butuh Segera Dieksekusi?</h2>
         <p class="cta-banner-desc">Konsultasikan kebutuhan teknismu sekarang. Gratis konsultasi arsitektur, pemilihan tech stack, dan estimasi waktu pengerjaan.</p>
         <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20untuk%20diskusi%20project%20freelance%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn" style="font-size: 1.05rem; padding: 16px 36px;">
-          <span>💬</span> Chat Projek.in via WhatsApp
+          Chat Projek.in via WhatsApp
         </a>
       </div>
     </div>
