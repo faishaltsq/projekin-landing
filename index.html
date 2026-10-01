@@ -267,16 +267,24 @@
     }
 
     .trust-icon {
-      width: 24px;
-      height: 24px;
-      background: #E8E8EB;
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--primary);
-      font-size: 0.85rem;
-      box-shadow: inset 1px 1px 3px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    .trust-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     /* Section Headers */
@@ -900,20 +908,32 @@
       <!-- Trust highlights -->
       <div class="clay-card trust-bar">
         <div class="trust-item">
-          <span class="trust-icon">✓</span>
-          <span>100% Kerahasiaan & NDA</span>
+          <span class="trust-icon">
+            <!-- Shield / NDA -->
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <span>100% Kerahasiaan &amp; NDA</span>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">✓</span>
-          <span>Clean Code & Teruji</span>
+          <span class="trust-icon">
+            <!-- Code brackets -->
+            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </span>
+          <span>Clean Code &amp; Teruji</span>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">✓</span>
+          <span class="trust-icon">
+            <!-- Cloud upload / deployment -->
+            <svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+          </span>
           <span>Deployment Siap Pakai</span>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">✓</span>
-          <span>Garansi Bug & Maintenance</span>
+          <span class="trust-icon">
+            <!-- Tool / wrench -->
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </span>
+          <span>Garansi Bug &amp; Maintenance</span>
         </div>
       </div>
     </div>
