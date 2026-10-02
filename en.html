@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projek.in — Freelance Software Engineer & IT Project Development</title>
-  <meta name="description" content="Jasa freelance software engineer untuk pengerjaan web application, mobile app, API backend, dan integrasi AI. Clean code, scalable, dan siap rilis ke production.">
+  <title>Projek.in — Full-Stack Software Engineer &amp; Product Development</title>
+  <meta name="description" content="Freelance full-stack software engineer specializing in scalable web apps, cross-platform mobile development, backend APIs, and AI integrations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -47,7 +47,6 @@
       line-height: 1.6;
       overflow-x: hidden;
       min-height: 100vh;
-      /* clean flat background */
     }
 
     /* Clay Utility Classes */
@@ -125,6 +124,24 @@
     .clay-btn-secondary:hover {
       box-shadow: 8px 8px 18px rgba(140, 140, 139, 0.3), -6px -6px 14px rgba(255, 255, 255, 0.95);
       color: var(--primary);
+    }
+
+    .lang-toggle {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1.5px solid var(--clay-border);
+      box-shadow: var(--clay-shadow-out-sm);
+      transition: all 0.2s ease;
+    }
+
+    .lang-toggle:hover {
+      background: var(--primary);
+      color: #fff;
     }
 
     /* Container */
@@ -318,7 +335,7 @@
       font-size: 1.05rem;
     }
 
-    /* Layanan Section - Asymmetric Cards */
+    /* Layanan / Services Section */
     .services {
       padding: 60px 0 90px;
     }
@@ -418,7 +435,7 @@
       stroke: var(--primary);
     }
 
-    /* Interactive WA Generator / Calculator */
+    /* Brief Builder */
     .calculator-section {
       padding: 30px 0 80px;
     }
@@ -487,7 +504,7 @@
       line-height: 1.5;
     }
 
-    /* Cara Kerja / Workflow */
+    /* Workflow */
     .workflow {
       padding: 60px 0 90px;
     }
@@ -864,23 +881,6 @@
         text-align: center;
       }
     }
-
-    .lang-toggle {
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-decoration: none;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: var(--card-bg);
-      color: var(--text-main);
-      border: 1.5px solid var(--clay-border);
-      box-shadow: var(--clay-shadow-out-sm);
-      transition: all 0.2s ease;
-    }
-    .lang-toggle:hover {
-      background: var(--primary);
-      color: #fff;
-    }
   </style>
 </head>
 <body>
@@ -893,16 +893,16 @@
         <span>Projek.in</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#portfolio">Portofolio</a></li>
-        <li><a href="#alur">Alur Kerja</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#workflow">Workflow</a></li>
         <li><a href="#stack">Tech Stack</a></li>
-        <li><a href="#kalkulator">Estimasi Brief</a></li>
+        <li><a href="#brief">Project Inquiry</a></li>
       </ul>
       <div style="display: flex; align-items: center; gap: 12px;">
-        <a href="en.html" class="lang-toggle" title="Switch to English">EN</a>
-        <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20mau%20konsultasi%20project%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn nav-cta-btn">
-          Konsultasi WA
+        <a href="index.html" class="lang-toggle" title="Switch to Indonesian">ID</a>
+        <a href="https://wa.me/62859106831589?text=Hi%20Projek.in%2C%20I%20would%20like%20to%20discuss%20a%20software%20project" target="_blank" rel="noopener noreferrer" class="clay-btn nav-cta-btn">
+          Contact Me
         </a>
       </div>
     </div>
@@ -913,25 +913,25 @@
     <div class="container">
       <div class="hero-badge-container">
         <div class="clay-pill">
-          <span>Freelance Software Engineer & IT Solution</span>
+          <span>Full-Stack Software Engineer &amp; Product Development</span>
         </div>
       </div>
 
       <h1 class="hero-title">
-        Punya Ide Software atau Butuh Eksekusi Fitur? <br>
-        <span class="gradient-text">Siap Bangun dari Nol Sampai Production.</span>
+        Turning Complex Product Ideas<br>
+        <span class="gradient-text">Into High-Performance Software.</span>
       </h1>
 
       <p class="hero-desc">
-        Jasa freelance engineering untuk pengerjaan web application, mobile app, API backend, otomatisasi sistem, hingga integrasi AI. Clean code, scalable, tepat waktu, dan siap rilis ke pengguna.
+        Freelance software engineering for web applications, cross-platform mobile apps, backend APIs, automation workflows, and custom AI integrations. Clean architecture, tested code, and built to scale.
       </p>
 
       <div class="hero-actions">
-        <a id="heroWaBtn" href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20untuk%20diskusi%20project%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn">
-          Chat WhatsApp Sekarang
+        <a href="#brief" class="clay-btn">
+          Start a Project Inquiry
         </a>
         <a href="#portfolio" class="clay-btn clay-btn-secondary">
-          Lihat Portofolio
+          View Live Portfolio
         </a>
       </div>
 
@@ -939,63 +939,59 @@
       <div class="clay-card trust-bar">
         <div class="trust-item">
           <span class="trust-icon">
-            <!-- Shield / NDA -->
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </span>
-          <span>100% Kerahasiaan &amp; NDA</span>
+          <span>100% Confidentiality &amp; NDA</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon">
-            <!-- Code brackets -->
             <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </span>
-          <span>Clean Code &amp; Teruji</span>
+          <span>Clean, Tested Codebase</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon">
-            <!-- Cloud upload / deployment -->
             <svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
           </span>
-          <span>Deployment Siap Pakai</span>
+          <span>Production-Ready Deployment</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon">
-            <!-- Tool / wrench -->
             <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           </span>
-          <span>Garansi Bug &amp; Maintenance</span>
+          <span>Post-Launch Bug Warranty</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Layanan Section -->
-  <section id="layanan" class="services">
+  <!-- Services Section -->
+  <section id="services" class="services">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">Layanan Kami</span>
-        <h2 class="section-title">Solusi Rekayasa Software Siap Pakai</h2>
-        <p class="section-desc">Dari perancangan arsitektur, frontend responsif, backend API handal, hingga integrasi model AI canggih.</p>
+        <span class="section-tag">Services</span>
+        <h2 class="section-title">End-to-End Engineering Solutions</h2>
+        <p class="section-desc">From architectural design and responsive frontends to robust backend APIs and intelligent AI systems.</p>
       </div>
 
       <div class="services-grid">
         <!-- Service Card 1 -->
         <div class="clay-card service-card highlight">
-          <span class="service-badge-tag">Paling Populer</span>
+          <span class="service-badge-tag">Most Popular</span>
           <div>
             <div class="service-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-            <h3 class="service-title">Web & Mobile App Development</h3>
-            <p class="service-desc">Pembangunan aplikasi web modern dan mobile app cross-platform dari ide/Figma hingga siap live diakses pengguna.</p>
+            <h3 class="service-title">Web &amp; Mobile App Development</h3>
+            <p class="service-desc">Modern web applications and cross-platform mobile apps engineered from concept/Figma to production-ready launch.</p>
             <ul class="service-features">
               <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Full-stack Web Apps (React, Next.js, Django, Laravel, Vue)</li>
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Mobile Apps Cross-Platform (React Native, Expo, Flutter)</li>
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Dashboard Admin, SaaS, Portal Bisnis, & E-Commerce</li>
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Desain responsif, clean UI/UX, dan optimasi performa tinggi</li>
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Setup domain, SSL, dan deployment ke cloud (Vercel, Railway, VPS)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Cross-Platform Mobile Apps (React Native, Expo, Flutter)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Admin Dashboards, SaaS, Business Portals, &amp; E-Commerce</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Responsive design, clean UI/UX, and performance optimization</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Custom domain, SSL setup, and cloud deployment (Vercel, Railway, VPS)</li>
             </ul>
           </div>
-          <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20dengan%20layanan%20Web%20%26%20Mobile%20App%20Development" target="_blank" rel="noopener noreferrer" class="clay-btn">
-            Mulai Diskusi Project
+          <a href="https://wa.me/62859106831589?text=Hi%20Projek.in%2C%20I%20am%20interested%20in%20Web%20%26%20Mobile%20App%20Development" target="_blank" rel="noopener noreferrer" class="clay-btn">
+            Discuss a Project
           </a>
         </div>
 
@@ -1003,113 +999,116 @@
         <div class="clay-card service-card">
           <div>
             <div class="service-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
-            <h3 class="service-title">Backend API, AI & Automation</h3>
-            <p class="service-desc">Layanan pengembangan backend scalable, integrasi model kecerdasan buatan (AI/LLM), serta otomatisasi sistem dan bot.</p>
+            <h3 class="service-title">Backend APIs, AI &amp; Automation</h3>
+            <p class="service-desc">Scalable backend architectures, artificial intelligence integrations (AI/LLM), automated workflows, and custom bots.</p>
             <ul class="service-features">
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> RESTful & GraphQL API berarsitektur clean (NestJS, Django, FastAPI)</li>
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Integrasi AI / LLM (OpenAI, Claude, custom chatbot & workflow)</li>
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Desain & migrasi database (PostgreSQL, Supabase, MySQL, Redis)</li>
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Otomatisasi script data scraping, bot Telegram, & E2E Testing (Playwright)</li>
-              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Integrasi Payment Gateway (Midtrans) & Third-Party Webhooks</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Clean-architecture RESTful &amp; GraphQL APIs (NestJS, Django, FastAPI)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> AI / LLM Integrations (OpenAI, Claude, custom chatbots &amp; workflows)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Database design &amp; migrations (PostgreSQL, Supabase, MySQL, Redis)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Data scraping scripts, Telegram bots, &amp; E2E Testing (Playwright)</li>
+              <li><span class="feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Payment Gateway integrations (Stripe, Midtrans) &amp; third-party webhooks</li>
             </ul>
           </div>
-          <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20dengan%20layanan%20Backend%20API%2C%20AI%20%26%20Automation" target="_blank" rel="noopener noreferrer" class="clay-btn clay-btn-secondary">
-            Konsultasi Backend & AI
+          <a href="https://wa.me/62859106831589?text=Hi%20Projek.in%2C%20I%20am%20interested%20in%20Backend%20APIs%2C%20AI%20%26%20Automation" target="_blank" rel="noopener noreferrer" class="clay-btn clay-btn-secondary">
+            Consult Backend &amp; AI
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive WA Generator -->
-  <section id="kalkulator" class="calculator-section">
+  <!-- Direct Inquiry Builder -->
+  <section id="brief" class="calculator-section">
     <div class="container">
       <div class="clay-card calc-card">
         <div class="section-head" style="margin-bottom: 32px;">
-          <span class="section-tag">Direct Chat Builder</span>
-          <h2 class="section-title">Kirim Brief Tanpa Bingung Basa-Basi</h2>
-          <p class="section-desc">Pilih kebutuhanmu di bawah, kami siapkan template pesan WhatsApp otomatis.</p>
+          <span class="section-tag">Direct Inquiry Builder</span>
+          <h2 class="section-title">Send a Quick Project Brief</h2>
+          <p class="section-desc">Select your requirements below to generate an instant, structured inquiry message.</p>
         </div>
 
         <div class="calc-grid">
           <div class="calc-group">
-            <label for="calcService">Jenis Kebutuhan</label>
-            <select id="calcService" class="clay-select" onchange="updateWaMessage()">
-              <option value="Pembuatan Web Application (Full-Stack / SaaS)">Pembuatan Web Application (Full-Stack / SaaS)</option>
-              <option value="Pembuatan Mobile App (Android / iOS)">Pembuatan Mobile App (Android / iOS)</option>
-              <option value="Pengembangan Backend & REST API">Pengembangan Backend & REST API</option>
-              <option value="Integrasi AI / LLM & Otomatisasi">Integrasi AI / LLM & Otomatisasi</option>
-              <option value="Fixing Bug / Refactor / Maintenance">Fixing Bug / Refactor / Maintenance</option>
+            <label for="calcService">Project Type</label>
+            <select id="calcService" class="clay-select" onchange="updateMessage()">
+              <option value="Full-Stack Web Application (SaaS / MVP)">Full-Stack Web Application (SaaS / MVP)</option>
+              <option value="Mobile App (iOS &amp; Android)">Mobile App (iOS &amp; Android)</option>
+              <option value="Backend Architecture &amp; RESTful API">Backend Architecture &amp; RESTful API</option>
+              <option value="AI / LLM Integration &amp; Workflow Automation">AI / LLM Integration &amp; Workflow Automation</option>
+              <option value="Bug Fixing, Refactoring &amp; Maintenance">Bug Fixing, Refactoring &amp; Maintenance</option>
             </select>
           </div>
 
           <div class="calc-group">
-            <label for="calcDeadline">Target Waktu / Deadline</label>
-            <select id="calcDeadline" class="clay-select" onchange="updateWaMessage()">
-              <option value="Santai (> 1 bulan)">Santai (> 1 bulan)</option>
-              <option value="Standar (2 - 4 minggu)">Standar (2 - 4 minggu)</option>
-              <option value="Prioritas (1 - 2 minggu)">Prioritas (1 - 2 minggu)</option>
-              <option value="Urgent / Kilat (< 7 hari)">Urgent / Kilat (&lt; 7 hari)</option>
+            <label for="calcDeadline">Timeline</label>
+            <select id="calcDeadline" class="clay-select" onchange="updateMessage()">
+              <option value="Flexible (> 1 month)">Flexible (&gt; 1 month)</option>
+              <option value="Standard (2 - 4 weeks)">Standard (2 - 4 weeks)</option>
+              <option value="Priority (1 - 2 weeks)">Priority (1 - 2 weeks)</option>
+              <option value="Urgent (< 7 days)">Urgent (&lt; 7 days)</option>
             </select>
           </div>
 
           <div class="calc-group">
-            <label for="calcStack">Preferensi Tech Stack (Opsional)</label>
-            <input type="text" id="calcStack" class="clay-input" placeholder="Misal: Next.js + Supabase, Laravel, Flutter..." oninput="updateWaMessage()">
+            <label for="calcStack">Preferred Tech Stack (Optional)</label>
+            <input type="text" id="calcStack" class="clay-input" placeholder="e.g. Next.js + Supabase, Python FastAPI, React Native..." oninput="updateMessage()">
           </div>
 
           <div class="calc-group">
-            <label for="calcDetail">Catatan Singkat</label>
-            <input type="text" id="calcDetail" class="clay-input" placeholder="Misal: Sudah ada Figma / MVP, butuh bantuan backend & deployment..." oninput="updateWaMessage()">
+            <label for="calcDetail">Brief Notes / Context</label>
+            <input type="text" id="calcDetail" class="clay-input" placeholder="e.g. Have Figma designs ready, need backend &amp; deployment..." oninput="updateMessage()">
           </div>
         </div>
 
         <div class="clay-inset preview-box">
-          <div class="preview-header">Preview Pesan WhatsApp:</div>
-          <div id="previewText" class="preview-message">Halo Projek.in, saya mau konsultasi...</div>
+          <div class="preview-header">Generated Inquiry Preview:</div>
+          <div id="previewText" class="preview-message">Hi Faishal, I would like to inquire about a software project...</div>
         </div>
 
-        <div style="text-align: center;">
-          <a id="calcWaLink" href="#" target="_blank" rel="noopener noreferrer" class="clay-btn" style="min-width: 260px;">
-            <span>Kirim ke WhatsApp Sekarang
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <button type="button" id="copyBtn" onclick="copyBrief()" class="clay-btn clay-btn-secondary" style="min-width: 200px;">
+            Copy to Clipboard
+          </button>
+          <a id="calcWaLink" href="#" target="_blank" rel="noopener noreferrer" class="clay-btn" style="min-width: 220px;">
+            Send via WhatsApp
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Cara Kerja Section -->
-  <section id="alur" class="workflow">
+  <!-- Workflow Section -->
+  <section id="workflow" class="workflow">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">Alur Transparan</span>
-        <h2 class="section-title">4 Langkah Mudah Kerja Bareng</h2>
-        <p class="section-desc">Proses terstruktur tanpa tebak-tebakan, progres selalu bisa kamu pantau.</p>
+        <span class="section-tag">Transparent Process</span>
+        <h2 class="section-title">4 Steps from Concept to Launch</h2>
+        <p class="section-desc">A structured, predictable development workflow where progress is transparent and verifiable at every step.</p>
       </div>
 
       <div class="steps-grid">
         <div class="clay-card step-card">
           <div class="step-num">01</div>
-          <h3 class="step-title">Diskusi Brief & Scope</h3>
-          <p class="step-desc">Kirimkan rincian kebutuhan, link Figma, atau spesifikasi fitur. Kami analisis estimasi teknis dan timeline terbaiknya.</p>
+          <h3 class="step-title">Scope &amp; Architecture</h3>
+          <p class="step-desc">Share your requirements, Figma designs, or feature specs. We assess the technical feasibility and map out the ideal timeline and architecture.</p>
         </div>
 
         <div class="clay-card step-card">
           <div class="step-num">02</div>
-          <h3 class="step-title">Kesepakatan & Milestone</h3>
-          <p class="step-desc">Penetapan target pengerjaan, milestone pengerjaan bertahap, dan skema pembayaran aman tanpa biaya tersembunyi.</p>
+          <h3 class="step-title">Milestones &amp; Quote</h3>
+          <p class="step-desc">Clear deliverables, structured milestones, transparent pricing with no hidden surprises, and secure development phases.</p>
         </div>
 
         <div class="clay-card step-card">
           <div class="step-num">03</div>
-          <h3 class="step-title">Development & Live Demo</h3>
-          <p class="step-desc">Eksekusi coding dengan standar industri. Kami sediakan staging preview berkala agar hasil selalu selaras dengan brief.</p>
+          <h3 class="step-title">Build &amp; Live Staging</h3>
+          <p class="step-desc">Clean code built to industry standards. Regular live staging previews ensure continuous alignment with your vision.</p>
         </div>
 
         <div class="clay-card step-card">
           <div class="step-num">04</div>
-          <h3 class="step-title">Deployment & Handover</h3>
-          <p class="step-desc">Serah terima full source code, panduan deployment production, dokumentasi API, plus garansi bug fixing.</p>
+          <h3 class="step-title">Deployment &amp; Handover</h3>
+          <p class="step-desc">Complete source code transfer, production deployment setup, API documentation, and post-launch bug warranty.</p>
         </div>
       </div>
     </div>
@@ -1119,9 +1118,9 @@
   <section id="stack" class="stack-section">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">Teknologi Modern</span>
-        <h2 class="section-title">Tech Stack yang Kami Kuasai</h2>
-        <p class="section-desc">Kami menggunakan standar industri terkini, memastikan aplikasi scalable, cepat, dan mudah dipahami.</p>
+        <span class="section-tag">Modern Engineering</span>
+        <h2 class="section-title">Core Technology Stack</h2>
+        <p class="section-desc">We build with modern industry standards, ensuring your software is scalable, performant, and maintainable.</p>
       </div>
 
       <div class="stack-pills-wrap">
@@ -1135,8 +1134,8 @@
         <span class="tech-pill">PostgreSQL / MySQL / Supabase</span>
         <span class="tech-pill">MongoDB / Redis</span>
         <span class="tech-pill">TensorFlow / PyTorch / YOLO</span>
-        <span class="tech-pill">Docker & Cloud Deployment</span>
-        <span class="tech-pill">PowerBI / Streamlit</span>
+        <span class="tech-pill">Docker &amp; Cloud Deployment</span>
+        <span class="tech-pill">Playwright / E2E Automation</span>
       </div>
     </div>
   </section>
@@ -1145,9 +1144,9 @@
   <section id="portfolio" class="portfolio">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">Portofolio Nyata</span>
-        <h2 class="section-title">Project yang Sudah Kami Kerjakan</h2>
-        <p class="section-desc">Bukan janji — ini bukti. Setiap project bisa kamu cek langsung source code-nya.</p>
+        <span class="section-tag">Proven Work</span>
+        <h2 class="section-title">Featured Live Projects</h2>
+        <p class="section-desc">Real, production-grade applications with verified deployments and interactive demos.</p>
       </div>
 
       <div class="portfolio-grid">
@@ -1155,7 +1154,7 @@
         <!-- SIM Akreditasi -->
         <div class="clay-card portfolio-card">
           <div class="portfolio-img-wrap">
-            <img src="assets/projects/sim-akreditasi.png" alt="SIM Akreditasi RS - Django Web App" loading="lazy">
+            <img src="assets/projects/sim-akreditasi.png" alt="Hospital Accreditation Management System" loading="lazy">
             <div class="portfolio-overlay">
               <a href="https://sim-akreditasi-web-production.up.railway.app/accounts/login/" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">Live Demo (Read-Only)</a>
             </div>
@@ -1167,13 +1166,13 @@
               <span class="ptag">Supabase</span>
               <span class="ptag">Railway</span>
             </div>
-            <h3 class="portfolio-title">SIM Akreditasi Rumah Sakit</h3>
-            <p class="portfolio-desc">Sistem informasi manajemen akreditasi RS lengkap: matriks PDCA 7-kolom, auto-scoring KARS, manajemen dokumen multi-pokja, 13 role user, dan ekspor PDF resmi.</p>
+            <h3 class="portfolio-title">Hospital Accreditation Management System</h3>
+            <p class="portfolio-desc">Comprehensive healthcare compliance web application: 7-column PDCA matrix, KARS auto-scoring formula, multi-committee document vault, 13 user roles, and official PDF reporting.</p>
             <div class="portfolio-demo-hint">
-              <span>Demo read-only:</span> <code>asesor.kars</code> / <code>Asesor@1234</code>
+              <span>Read-only demo:</span> <code>asesor.kars</code> / <code>Asesor@1234</code>
             </div>
             <div class="portfolio-meta">
-              <span class="pmeta-item">Full-stack Web App</span>
+              <span class="pmeta-item">Full-Stack Web App</span>
               <span class="pmeta-item">Enterprise Grade</span>
             </div>
           </div>
@@ -1182,7 +1181,7 @@
         <!-- Web-Weave -->
         <div class="clay-card portfolio-card">
           <div class="portfolio-img-wrap">
-            <img src="assets/projects/web-weave.png" alt="WebWeave - AI QA Automation Generator" loading="lazy">
+            <img src="assets/projects/web-weave.png" alt="WebWeave — AI QA Automation Platform" loading="lazy">
             <div class="portfolio-overlay">
               <a href="https://web-weave-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">Live Demo</a>
             </div>
@@ -1194,8 +1193,8 @@
               <span class="ptag">AI/LLM</span>
               <span class="ptag">Vercel</span>
             </div>
-            <h3 class="portfolio-title">WebWeave — AI QA Automation</h3>
-            <p class="portfolio-desc">Generator skrip automation testing berbasis AI. Scan DOM halaman target, ekstrak locator kandidat, dan generate skrip Playwright/Cypress/Selenium otomatis via LLM.</p>
+            <h3 class="portfolio-title">WebWeave — AI QA Automation Platform</h3>
+            <p class="portfolio-desc">AI-powered test automation generator. Scans target DOM, extracts candidate locators, and synthesizes robust Playwright, Cypress, and Selenium scripts via LLM.</p>
             <div class="portfolio-meta">
               <span class="pmeta-item">AI-Powered</span>
               <span class="pmeta-item">SaaS + Midtrans Billing</span>
@@ -1206,7 +1205,7 @@
         <!-- ChatWeb Trading -->
         <div class="clay-card portfolio-card">
           <div class="portfolio-img-wrap">
-            <img src="assets/projects/chatweb-trading.png" alt="ChatWeb Trading - AI Trading Chat" loading="lazy">
+            <img src="assets/projects/chatweb-trading.png" alt="ChatWeb Trading — AI Financial Assistant" loading="lazy">
             <div class="portfolio-overlay">
             </div>
           </div>
@@ -1217,8 +1216,8 @@
               <span class="ptag">AI/LLM</span>
               <span class="ptag">Turso DB</span>
             </div>
-            <h3 class="portfolio-title">ChatWeb Trading — AI Trading Assistant</h3>
-            <p class="portfolio-desc">Aplikasi chat berbasis AI untuk analisis trading. Integrasi LLM multi-provider via 9Router, persistent chat history dengan Turso (libSQL), dan autentikasi via NextAuth.</p>
+            <h3 class="portfolio-title">ChatWeb Trading — AI Financial Assistant</h3>
+            <p class="portfolio-desc">AI-powered trading analysis chat application. Multi-provider LLM integration via 9Router, persistent chat history with Turso (libSQL), and NextAuth authentication.</p>
             <div class="portfolio-meta">
               <span class="pmeta-item">FinTech</span>
               <span class="pmeta-item">Multi-LLM</span>
@@ -1229,7 +1228,7 @@
         <!-- DompetBareng -->
         <div class="clay-card portfolio-card">
           <div class="portfolio-img-wrap mobile-frame">
-            <img src="assets/projects/dompet-bareng.png" alt="DompetBareng - Mobile Finance App" loading="lazy">
+            <img src="assets/projects/dompet-bareng.png" alt="DompetBareng — Multi-Tenant Finance App" loading="lazy">
             <div class="portfolio-overlay">
               <a href="https://dompet-bareng.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">Live Web App</a>
             </div>
@@ -1241,10 +1240,10 @@
               <span class="ptag">Supabase</span>
               <span class="ptag">Gemini AI</span>
             </div>
-            <h3 class="portfolio-title">DompetBareng — Manajemen Keuangan Bersama</h3>
-            <p class="portfolio-desc">Mobile app multi-workspace untuk keuangan keluarga & organisasi: real-time notifikasi Supabase, AI assistant berkarakter maskot otter, Google OAuth, invite link, dan download APK langsung.</p>
+            <h3 class="portfolio-title">DompetBareng — Multi-Tenant Finance App</h3>
+            <p class="portfolio-desc">Multi-workspace mobile application for family &amp; team finances: real-time Supabase notifications, otter mascot AI assistant, Google OAuth, workspace invite links, and direct APK download.</p>
             <div class="portfolio-meta">
-              <span class="pmeta-item">iOS & Android</span>
+              <span class="pmeta-item">iOS &amp; Android</span>
               <span class="pmeta-item">AI Assistant</span>
               <span class="pmeta-item">Realtime</span>
             </div>
@@ -1254,7 +1253,7 @@
         <!-- SIM-KTKL -->
         <div class="clay-card portfolio-card">
           <div class="portfolio-img-wrap">
-            <img src="assets/projects/sim-ktkl.png" alt="SIM-KTKL — Sistem Informasi Komite Tenaga Kesehatan" loading="lazy">
+            <img src="assets/projects/sim-ktkl.png" alt="SIM-KTKL — Clinical Committee Management" loading="lazy">
             <div class="portfolio-overlay">
               <a href="https://sim-ktkl-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">Live Demo</a>
             </div>
@@ -1265,19 +1264,19 @@
               <span class="ptag">PostgreSQL</span>
               <span class="ptag">Railway</span>
             </div>
-            <h3 class="portfolio-title">SIM-KTKL — Komite Tenaga Kesehatan RS</h3>
-            <p class="portfolio-desc">Sistem informasi manajemen Komite Tenaga Kesehatan Lainnya: tracking kredensial STR/SIP, evaluasi OPPE 20 indikator, mutu layanan klinis, etik & disiplin profesi, serta sekretariat rapat.</p>
+            <h3 class="portfolio-title">SIM-KTKL — Clinical Committee Management</h3>
+            <p class="portfolio-desc">Healthcare credentialing &amp; clinical governance system: STR/SIP credential tracking, 20-indicator OPPE evaluation, clinical care quality audits, ethics &amp; discipline, and committee secretariat.</p>
             <div class="portfolio-meta">
-              <span class="pmeta-item">Full-stack Web App</span>
+              <span class="pmeta-item">Full-Stack Web App</span>
               <span class="pmeta-item">Healthcare</span>
             </div>
           </div>
         </div>
 
-        <!-- Lolos.in (Belajar CPNS) -->
+        <!-- Lolos.in -->
         <div class="clay-card portfolio-card">
           <div class="portfolio-img-wrap">
-            <img src="assets/projects/lolos-in.png" alt="Lolos.in — Platform Belajar CPNS" loading="lazy">
+            <img src="assets/projects/lolos-in.png" alt="Lolos.in — EdTech Exam Prep SaaS" loading="lazy">
             <div class="portfolio-overlay">
               <a href="https://belajar-cpns-saas.vercel.app" target="_blank" rel="noopener noreferrer" class="portfolio-live-btn">Live Demo</a>
             </div>
@@ -1290,8 +1289,8 @@
               <span class="ptag">Tailwind</span>
               <span class="ptag">Vercel</span>
             </div>
-            <h3 class="portfolio-title">Lolos.in — Platform Tryout CPNS SaaS</h3>
-            <p class="portfolio-desc">Platform latihan soal dan tryout CPNS berbasis SaaS. Bank soal TWK/TIU/TKP dengan timer, scoring otomatis, analisis per kategori, dan dashboard performa peserta.</p>
+            <h3 class="portfolio-title">Lolos.in — EdTech Exam Prep SaaS</h3>
+            <p class="portfolio-desc">SaaS exam preparation and mock test platform. Categorized question bank (TWK/TIU/TKP) with timed test simulations, automated scoring, analytical breakdowns, and candidate performance dashboards.</p>
             <div class="portfolio-meta">
               <span class="pmeta-item">SaaS</span>
               <span class="pmeta-item">EdTech</span>
@@ -1307,10 +1306,10 @@
   <section class="final-cta">
     <div class="container">
       <div class="clay-card cta-banner">
-        <h2 class="cta-banner-title">Punya Project yang Butuh Segera Dieksekusi?</h2>
-        <p class="cta-banner-desc">Konsultasikan kebutuhan teknismu sekarang. Gratis konsultasi arsitektur, pemilihan tech stack, dan estimasi waktu pengerjaan.</p>
-        <a href="https://wa.me/62859106831589?text=Halo%20Projek.in%2C%20saya%20tertarik%20untuk%20diskusi%20project%20freelance%20IT" target="_blank" rel="noopener noreferrer" class="clay-btn" style="font-size: 1.05rem; padding: 16px 36px;">
-          Chat Projek.in via WhatsApp
+        <h2 class="cta-banner-title">Ready to Bring Your Product to Life?</h2>
+        <p class="cta-banner-desc">Let's discuss your technical requirements, architectural design, and timeline estimates today.</p>
+        <a href="#brief" class="clay-btn" style="font-size: 1.05rem; padding: 16px 36px;">
+          Start Project Discussion
         </a>
       </div>
     </div>
@@ -1320,10 +1319,10 @@
   <footer>
     <div class="container footer-content">
       <div style="font-weight: 700; color: var(--text-main);">
-        Projek.in — Freelance Software Engineer & IT Solution
+        Projek.in — Full-Stack Software Engineer &amp; Product Development
       </div>
       <div>
-        Hubungi kami: <a href="https://wa.me/62859106831589" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">+62 859-1068-31589</a>
+        Direct Contact: <a href="https://wa.me/62859106831589" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">WhatsApp</a> / Reddit PM
       </div>
       <div>
         &copy; 2026 Projek.in. All rights reserved.
@@ -1331,22 +1330,22 @@
     </div>
   </footer>
 
-  <!-- Script for WhatsApp Generator -->
+  <!-- Script for Inquiry Generator & Clipboard -->
   <script>
-    function updateWaMessage() {
+    function updateMessage() {
       const service = document.getElementById('calcService').value;
       const deadline = document.getElementById('calcDeadline').value;
       const stack = document.getElementById('calcStack').value.trim();
       const detail = document.getElementById('calcDetail').value.trim();
 
-      let msg = `Halo Tim Projek.in,\nSaya mau konsultasi:\n- Layanan: ${service}\n- Target Waktu: ${deadline}`;
+      let msg = `Hi Faishal,\nI would like to inquire about a software project:\n- Project Type: ${service}\n- Timeline: ${deadline}`;
       if (stack) {
-        msg += `\n- Tech Stack: ${stack}`;
+        msg += `\n- Preferred Stack: ${stack}`;
       }
       if (detail) {
-        msg += `\n- Catatan: ${detail}`;
+        msg += `\n- Details: ${detail}`;
       }
-      msg += `\nMohon info estimasi biaya dan ketersediaan slot pengerjaan. Terima kasih!`;
+      msg += `\nPlease let me know your availability and estimated rate. Thank you!`;
 
       document.getElementById('previewText').textContent = msg;
 
@@ -1356,9 +1355,21 @@
       document.getElementById('calcWaLink').href = waUrl;
     }
 
+    function copyBrief() {
+      const text = document.getElementById('previewText').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copyBtn');
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => {
+          btn.textContent = originalText;
+        }, 2000);
+      });
+    }
+
     // Initialize on page load
     window.addEventListener('DOMContentLoaded', () => {
-      updateWaMessage();
+      updateMessage();
     });
   </script>
 </body>
